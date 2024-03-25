@@ -11,7 +11,5 @@ Orientação: Roberto Lamberts e Mateus Bavaresco 👷🏻👷🏻<br>
 <br>
 
 <h2><strong>Próximas atualizações 💻✅<strong></h2>
-- Melhora na janela de ajuda (adição de mais informações)<br>
-- Possibilidade de gerar arquivo de texto com os resultados<br>
 - Adição de cores para fill nas paredes traseiras do desenho<br>
 - Replanejamento do desenho aberto do ambiente<br>
