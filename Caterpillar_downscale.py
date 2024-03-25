@@ -1,6 +1,8 @@
 import customtkinter as ctk
 from turtle import RawTurtle, Canvas, TurtleScreen
 import math
+from pkg_resources import resource_filename
+my_icon = resource_filename(__name__, 'icon_default.ico')
 
 title_font = ('calibri', 20)
 text_font = ('calibri', 15)
@@ -27,6 +29,7 @@ calcular_color = '#00FF0A'
 class Caterpillar:
     def __init__(self, jan):
         self.jan = jan
+        self.jan.iconbitmap(my_icon)
         open_room_size = 72
         open_room_pos_init = (-30, -126)
 
