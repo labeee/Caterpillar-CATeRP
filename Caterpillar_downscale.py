@@ -853,6 +853,12 @@ Parede frontal: {result_data['ff_posterior_piso_total']}
         resultados_label = ctk.CTkLabel(topframe, text=resultados, font=text_font, text_color=txt_color, justify='center')
         resultados_label.pack()
 
+        def save_results():
+            open('RESULTADOS.txt', 'w', encoding='utf-8').write(resultados)
+
+        create_text_button = ctk.CTkButton(calculation_window, text='+', text_color=txt_color_alt, font=title_font, width=25, fg_color=txt_color, corner_radius=90, command=save_results)
+        create_text_button.place(relx=0.85,y=15)
+
     def open_help(self):
         help_window = ctk.CTkToplevel()
         help_window.attributes("-topmost", True)
@@ -863,9 +869,8 @@ Parede frontal: {result_data['ff_posterior_piso_total']}
         titulo_help = ctk.CTkLabel(help_window, text='Ajuda - Caterpillar', font=title_font, text_color=txt_color)
         titulo_help.pack(pady=12)
 
-        topframe = ctk.CTkFrame(help_window, fg_color=foreground, height=560, width=288)
-        topframe.pack(padx=36)
-        topframe.pack_propagate(False)
+        topframe = ctk.CTkScrollableFrame(help_window, fg_color=foreground, height=850, width=480)
+        topframe.pack(padx=40)
 
         primeiro_paragrafo = """
 Esta é a nova versão de uma antiga ferramenta desenvolvida 
@@ -879,10 +884,10 @@ o centro do plano no ambiente.
 Feito isso, pressione o botão"""
 
         p_1 = ctk.CTkLabel(topframe, font=help_font, text_color=txt_color, text=primeiro_paragrafo, justify='left')
-        p_1.pack(padx=5, pady=5)
+        p_1.pack(pady=5)
         
         desenhar_help = ctk.CTkButton(topframe, text='Desenhar', font=text_font, text_color=txt_color_alt, fg_color=desenhar_color)
-        desenhar_help.pack(pady=general_pady, padx=30)
+        desenhar_help.pack(pady=general_pady)
 
         segundo_paragrafo = """Você verá o desenho do ambiente sendo feito 
 no canvas à direita. Não se preocupe com medidas 
@@ -899,27 +904,40 @@ face do ambiente, em graus celsius, na ordem
 da representação do canvas, e clicar no botão"""
 
         p_2 = ctk.CTkLabel(topframe, font=help_font, text_color=txt_color, text=segundo_paragrafo, justify='left')
-        p_2.pack(padx=5, pady=5) 
+        p_2.pack(pady=5) 
 
         calcular_help = ctk.CTkButton(topframe, text='Calcular', font=text_font, text_color=txt_color_alt, fg_color=calcular_color)
-        calcular_help.pack(pady=general_pady, padx=30)
+        calcular_help.pack(pady=general_pady)
     
         terceiro_paragrafo = """Assim que os cálculos forem feitos, será aberta uma 
 nova janela igual a esta contendo os resultados dos 
 cálculos. Não é necessário pressionar no botão "desenho" 
 para os cálculos funcionarem, esta função serve apenas 
-para conferência e orientação do usuário."""
+para conferência e orientação do usuário.
+
+Na janela de resultados, há um botão"""
 
         p_3 = ctk.CTkLabel(topframe, font=help_font, text_color=txt_color, text=terceiro_paragrafo, justify='left')
-        p_3.pack(padx=5, pady=5) 
+        p_3.pack(pady=5) 
 
-        creditos = """Feito por Zac Milioli, LabEEE 2024
+        create_text_button_help = ctk.CTkButton(topframe, text='+', text_color=txt_color_alt, font=title_font, width=25, fg_color=txt_color, corner_radius=90)
+        create_text_button_help.pack(pady=general_pady)
+
+        quarto_paragrafo = """Clicar nele fará com que um arquivo de texto de 
+nome "RESULTADOS" seja criado contendo os resultados
+calculados."""
+
+        p_4 = ctk.CTkLabel(topframe, font=help_font, text_color=txt_color, text=quarto_paragrafo, justify='left')
+        p_4.pack(pady=5) 
+
+        creditos = """
+Feito por Zac Milioli, LabEEE 2024
 zacmilioli@gmail.com
 https://www.linkedin.com/in/zac-milioli/
 https://github.com/Zac-Milioli"""
 
-        p_4 = ctk.CTkLabel(topframe, font=help_font, text_color=txt_color, text=creditos)
-        p_4.pack(padx=5, pady=20) 
+        cred = ctk.CTkLabel(topframe, font=help_font, text_color=txt_color, text=creditos)
+        cred.pack(pady=20) 
 
 
 if __name__ == '__main__':
