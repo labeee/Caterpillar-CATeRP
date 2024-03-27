@@ -47,11 +47,11 @@ class Caterpillar:
             ambiente_titulo = ctk.CTkLabel(c_ambiente, text='Medidas do Ambiente', font=text_font, text_color=txt_color)
             ambiente_titulo.pack(pady=general_pady)
 
-            largura_ambiente = ctk.CTkEntry(c_ambiente, placeholder_text='Largura (cm)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            largura_ambiente = ctk.CTkEntry(c_ambiente, placeholder_text='Largura (m)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             largura_ambiente.pack(pady=general_pady)
-            comprimento_ambiente = ctk.CTkEntry(c_ambiente, placeholder_text='Comprimento (cm)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            comprimento_ambiente = ctk.CTkEntry(c_ambiente, placeholder_text='Comprimento (m)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             comprimento_ambiente.pack(pady=general_pady)
-            altura_ambiente = ctk.CTkEntry(c_ambiente, placeholder_text='Altura (cm)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            altura_ambiente = ctk.CTkEntry(c_ambiente, placeholder_text='Altura (m)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             altura_ambiente.pack(pady=general_pady)
 
             c_posicao = ctk.CTkFrame(frame, fg_color='transparent')
@@ -60,11 +60,11 @@ class Caterpillar:
             posicao_titulo = ctk.CTkLabel(c_posicao, text='Posição do Plano', font=text_font, text_color=txt_color)
             posicao_titulo.pack(pady=general_pady)
 
-            x_coord = ctk.CTkEntry(c_posicao, placeholder_text='X (cm)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            x_coord = ctk.CTkEntry(c_posicao, placeholder_text='X (m)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             x_coord.pack(pady=general_pady)
-            y_coord = ctk.CTkEntry(c_posicao, placeholder_text='Y (cm)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            y_coord = ctk.CTkEntry(c_posicao, placeholder_text='Y (m)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             y_coord.pack(pady=general_pady)
-            z_coord = ctk.CTkEntry(c_posicao, placeholder_text='Z (cm)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            z_coord = ctk.CTkEntry(c_posicao, placeholder_text='Z (m)', font=credit_font, width=250, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             z_coord.pack(pady=general_pady)
 
             def verify_room():
@@ -99,17 +99,17 @@ class Caterpillar:
             temp_titulo = ctk.CTkLabel(c_temp, text='Temperaturas', font=text_font, text_color=txt_color)
             temp_titulo.grid(row=0, column=0, columnspan=2,pady=general_pady)
 
-            temp_frontal = ctk.CTkEntry(c_temp, placeholder_text='Frontal', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            temp_frontal = ctk.CTkEntry(c_temp, placeholder_text='Frontal (°C)', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             temp_frontal.grid(row=1, column=0, pady=general_pady, padx=general_pady)
-            temp_lat_esq = ctk.CTkEntry(c_temp, placeholder_text='Lateral Esquerda', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            temp_lat_esq = ctk.CTkEntry(c_temp, placeholder_text='Lateral Esquerda (°C)', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             temp_lat_esq.grid(row=2, column=0, pady=general_pady, padx=general_pady)
-            temp_piso = ctk.CTkEntry(c_temp, placeholder_text='Piso', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            temp_piso = ctk.CTkEntry(c_temp, placeholder_text='Piso (°C)', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             temp_piso.grid(row=3, column=0, pady=general_pady, padx=general_pady)
-            temp_posterior = ctk.CTkEntry(c_temp, placeholder_text='Posterior', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            temp_posterior = ctk.CTkEntry(c_temp, placeholder_text='Posterior (°C)', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             temp_posterior.grid(row=1, column=1, pady=general_pady, padx=general_pady)
-            temp_lat_dir = ctk.CTkEntry(c_temp, placeholder_text='Lateral Direita', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            temp_lat_dir = ctk.CTkEntry(c_temp, placeholder_text='Lateral Direita (°C)', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             temp_lat_dir.grid(row=2, column=1, pady=general_pady, padx=general_pady)
-            temp_teto = ctk.CTkEntry(c_temp, placeholder_text='Teto', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
+            temp_teto = ctk.CTkEntry(c_temp, placeholder_text='Teto (°C)', font=credit_font, width=160, text_color=txt_color, border_color=txt_color, border_width=1, fg_color=entry_bg)
             temp_teto.grid(row=3, column=1, pady=general_pady, padx=general_pady)
 
             def calculate():
@@ -613,12 +613,12 @@ Piso: {result_data['ff_posterior_piso_total']}"""
         }
 
         coordinates = {
-            'dist_frontal': room['pos_y'],
-            'dist_posterior': room['comprimento'] - room['pos_y'],
+            'dist_frontal': room['comprimento'] - room['pos_y'],
+            'dist_posterior': room['pos_y'],
             'dist_piso': room['pos_z'],
             'dist_teto': room['altura'] - room['pos_z'],
-            'dist_lat_direita': room['pos_x'],
-            'dist_lat_esquerda': room['largura'] - room['pos_x'],
+            'dist_lat_direita': room['largura'] - room['pos_x'],
+            'dist_lat_esquerda': room['pos_x'],
         }
 
         ort_ff_frontal_dict = {
@@ -740,12 +740,12 @@ Piso: {result_data['ff_posterior_piso_total']}"""
         }
 
         coordinates = {
-            'dist_frontal': room['pos_y'],
-            'dist_posterior': room['comprimento'] - room['pos_y'],
+            'dist_frontal': room['comprimento'] - room['pos_y'],
+            'dist_posterior': room['pos_y'],
             'dist_piso': room['pos_z'],
             'dist_teto': room['altura'] - room['pos_z'],
-            'dist_lat_direita': room['pos_x'],
-            'dist_lat_esquerda': room['largura'] - room['pos_x'],
+            'dist_lat_direita': room['largura'] - room['pos_x'],
+            'dist_lat_esquerda': room['pos_x'],
         }
 
         ort_ff_frontal_dict = {
