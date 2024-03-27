@@ -7,9 +7,10 @@ Desenvolvida por [Zac Milioli](https://github.com/Zac-Milioli) 👩🏻‍💻 <
 Ícone por: Thalita Maciel e Nathalia Coelho 👩🏻‍🎨👩🏻‍🎨<br>
 Orientação: Roberto Lamberts e Mateus Bavaresco 👷🏻👷🏻<br>
 <h3><strong>Versão atual: 🎉</strong></h3> 
-1.1
+1.2
 <br>
 
 <h2><strong>Próximas atualizações 💻✅<strong></h2>
 - Adição de cores para fill nas paredes traseiras do desenho<br>
 - Replanejamento do desenho aberto do ambiente<br>
+- Expansão da janela de ajuda<br>
