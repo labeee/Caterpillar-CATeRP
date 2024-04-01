@@ -7,7 +7,7 @@ Desenvolvida por [Zac Milioli](https://github.com/Zac-Milioli) 👩🏻‍💻 <
 Ícone por: Thalita Maciel e Nathalia Coelho 👩🏻‍🎨👩🏻‍🎨<br>
 Orientação: Roberto Lamberts e Mateus Bavaresco 👷🏻👷🏻<br>
 <h3><strong>Versão atual: 🎉</strong></h3> 
-1.2
+1.2.1
 <br>
 
 <h2><strong>Próximas atualizações 💻✅<strong></h2>

@@ -613,8 +613,8 @@ Piso: {result_data['ff_posterior_piso_total']}"""
         }
 
         coordinates = {
-            'dist_frontal': room['comprimento'] - room['pos_y'],
-            'dist_posterior': room['pos_y'],
+            'dist_frontal': room['pos_y'],
+            'dist_posterior': room['comprimento'] - room['pos_y'],
             'dist_piso': room['pos_z'],
             'dist_teto': room['altura'] - room['pos_z'],
             'dist_lat_direita': room['largura'] - room['pos_x'],
@@ -744,8 +744,8 @@ Piso: {result_data['ff_posterior_piso_total']}"""
             'dist_posterior': room['pos_y'],
             'dist_piso': room['pos_z'],
             'dist_teto': room['altura'] - room['pos_z'],
-            'dist_lat_direita': room['largura'] - room['pos_x'],
-            'dist_lat_esquerda': room['pos_x'],
+            'dist_lat_direita': room['pos_x'],
+            'dist_lat_esquerda': room['largura'] - room['pos_x'],
         }
 
         ort_ff_frontal_dict = {
