@@ -610,22 +610,13 @@ Piso: {result_data['ff_posterior_piso_total']}"""
         for key in temps:
             temps[key] += 273.15
 
-        room = {
-            'largura': comprimento,
-            'comprimento': largura,
-            'altura': altura,
-            'pos_x': y,
-            'pos_y': x,
-            'pos_z': z
-        }
-
         coordinates = {
-            'dist_frontal': room['pos_y'],
-            'dist_posterior': room['comprimento'] - room['pos_y'],
+            'dist_frontal': room['largura'] - room['pos_x'],
+            'dist_posterior': room['pos_x'],
             'dist_piso': room['pos_z'],
             'dist_teto': room['altura'] - room['pos_z'],
-            'dist_lat_direita': room['largura'] - room['pos_x'],
-            'dist_lat_esquerda': room['pos_x'],
+            'dist_lat_direita': room['pos_y'],
+            'dist_lat_esquerda': room['comprimento'] - room['pos_y'],
         }
 
         ort_ff_frontal_dict = {
@@ -737,20 +728,11 @@ Piso: {result_data['ff_posterior_piso_total']}"""
         for key in temps:
             temps[key] += 273.15
 
-        room = {
-            'largura': largura,
-            'comprimento': altura,
-            'altura': comprimento,
-            'pos_x': x,
-            'pos_y': z,
-            'pos_z': y
-        }
-
         coordinates = {
-            'dist_frontal': room['comprimento'] - room['pos_y'],
-            'dist_posterior': room['pos_y'],
-            'dist_piso': room['pos_z'],
-            'dist_teto': room['altura'] - room['pos_z'],
+            'dist_frontal': room['altura'] - room['pos_z'],
+            'dist_posterior': room['pos_z'],
+            'dist_piso': room['pos_y'],
+            'dist_teto': room['comprimento'] - room['pos_y'],
             'dist_lat_direita': room['pos_x'],
             'dist_lat_esquerda': room['largura'] - room['pos_x'],
         }
